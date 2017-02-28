@@ -1,0 +1,7 @@
+transform column "$.'info'[*].'fileInfo'[*].'descriptor'" to "Dataset[].type[]";
+transform column "$.'info'[*].'fileInfo'[*].'filetype'" to "DataStandard[].type[]";
+transform column "$.'info'[*].'Organism'" to "Dataset[].title";
+transform column "$.'info'[*].'full_name'" to "Dataset[].isAbout";
+transform column "$.'info'[*].'full_name'" to "Material.name";
+transform column "$.'info'[*].'assemblies'[*].'appeared_in'" to "Dataset[].version";
+transform column "$.'info'[*].'assemblies'[*].'laboratory.[*]" to "Dataset[].creators";

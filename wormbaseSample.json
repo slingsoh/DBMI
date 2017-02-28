@@ -1,0 +1,44 @@
+{
+   "info" : [{
+      "Organism":"b_malayi",
+      "Version":"WS257",
+      "assemblies" : [
+         {
+            "appeared_in" : "WS251",
+            "assembly_accession" : null,
+            "assembly_name" : "B_malayi-4.0",
+            "bioproject" : "PRJNA10729",
+            "bioproject_description" : "University of Pittsburgh B. malayi genome project",
+            "is_canonical" : true,
+            "laboratory" : [
+               "University of Pittsburgh, Pittsburgh, PA"
+            ],
+            "strain" : "FR3"
+         }
+      ],
+      "fileInfo":[{"descriptor":"geneIDs","filetype":"txt"},
+            {"descriptor":"geneOtherIDs","filetype":"txt"},
+            {"descriptor":"orthologs","filetype":"txt"},
+            {"descriptor":"protein_domains","filetype":"tsv"},
+            {"descriptor":"repeats","filetype":"fa"},
+            {"descriptor":"RNASeq_controls_FPKM","filetype":"dat"},
+            {"descriptor":"SRA_gene_expression","filetype":"tar"},
+            {"descriptor":"annotations","filetype":"gff2"},
+            {"descriptor":"annotations","filetype":"gff3"},
+            {"descriptor":"best_blastp_hits","filetype":"txt"},
+            {"descriptor":"canonical_geneset","filetype":"gtf"},
+            {"descriptor":"CDS_transcripts","filetype":"fa"},
+            {"descriptor":"ests","filetype":"fa"},
+            {"descriptor":"genomic_masked","filetype":"fa"},
+            {"descriptor":"genomic_softmasked","filetype":"fa"},
+            {"descriptor":"genomic","filetype":"fa"},
+            {"descriptor":"intergenic_sequences","filetype":"fa"},
+            {"descriptor":"mRNA_transcripts","filetype":"fa"},
+            {"descriptor":"ncRNA_transcripts","filetype":"fa"},
+            {"descriptor":"protein","filetype":"fa"},
+            {"descriptor":"pseudogenic_transcripts","filetype":"fa"},
+            {"descriptor":"wormpep_package","filetype":"tar"},
+            {"descriptor":"xrefs","filetype":"txt"}],
+      "full_name" : "Brugia malayi"
+   }]
+}
