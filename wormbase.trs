@@ -1,7 +1,18 @@
-transform column "$.'info'[*].'fileInfo'[*].'descriptor'" to "Dataset[].type[]";
-transform column "$.'info'[*].'fileInfo'[*].'filetype'" to "DataStandard[].type[]";
-transform column "$.'info'[*].'Organism'" to "Dataset[].title";
-transform column "$.'info'[*].'full_name'" to "Dataset[].isAbout";
-transform column "$.'info'[*].'full_name'" to "Material.name";
-transform column "$.'info'[*].'assemblies'[*].'appeared_in'" to "Dataset[].version";
-transform column "$.'info'[*].'assemblies'[*].'laboratory.[*]" to "Dataset[].creators";
+let "DataRepository.name" = "Wormbase";
+transform column "$.'fileInfo'[*].'descriptor'" to "Dataset[].type[]";
+transform column "$.'fileInfo'[*].'filetype'" to "DataStandard[].type[]";
+let "DataStandard[].name" = "Data Standard Type";
+transform column "$.'Organism'" to "Dataset[].title";
+transform column "$.'full_name'" to "Dataset[].isAbout";
+transform column "$.'full_name'" to "Material.name";
+transform column "$.'assemblies'[*].'appeared_in'" to "DatasetRepository.version";
+transform column "$.'assemblies'[*].'laboratory.[*]" to "Dataset[].creators";
+transform column "$.'assemblies'[*].'bioproject' to "DatasetDistribution.Access.identifier";
+let "DatasetDistribution.Access.accessURL" = "https://www.ncbi.nlm.nih.gov/bioproject/";
+let "DatasetDistribution.identifier" = "NCBI Bioproject";
+let "Grant.name" = "# U41 HG002223";
+let "Grant.funders" = "National Human Genome Research Institute at NIH, British Medical Research Council";
+let "License.name" = "As a web-based resource, WormBase is primarily designed for users interacting with the resource on a page-by-page basis. Users wishing to automate data retrieval from WormBase should direct their scripts to the data mining server (mining.wormbase.org) instead of the primary WormBase server. In consideration of other users, we request that any script -- whether it be mining the web interface or directly interacting with the underlying databases -- send no more than one request every three seconds. If these facilities do not provide adequate speed for your needs, you may download and install the database locally or run a preconfigured instance of WormBase on Amazon's EC2 cloud infrastructure. For additional help, please contact help@wormbase.org.";
+let "Publication.title" = "NCBI";
+
+
